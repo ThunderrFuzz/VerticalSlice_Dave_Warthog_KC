@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HyeanaMovement : BasePlayerMovement
+public class MoveFireball : CombatManager
 {
+    public int projectileVel;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class HyeanaMovement : BasePlayerMovement
     // Update is called once per frame
     void Update()
     {
-        base.ApplyGravity();
+        transform.Translate(Vector3.forward * projectileVel * Time.deltaTime );
     }
 }
