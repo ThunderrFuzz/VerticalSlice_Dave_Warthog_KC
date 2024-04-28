@@ -5,12 +5,13 @@ public class SmoothCameraFollow : MonoBehaviour
     public Transform target; // The object the camera will follow
     public Vector3 offset; // The offset from the target position
     public float smoothSpeed = 0.125f; // The speed of camera movement
-
+    public Shader ToonShader;
     private Camera mainCamera; // Reference to the main camera
 
     void Start()
     {
         mainCamera = Camera.main; // Get the main camera in the scene
+        Camera.main.SetReplacementShader(ToonShader, "");
     }
 
     void LateUpdate()

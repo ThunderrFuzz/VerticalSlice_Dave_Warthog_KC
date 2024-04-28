@@ -9,6 +9,7 @@ TagManager:
   - InvisWall
   - SpawnPoints
   - CutsceneTrig
+  - Sphere
   layers:
   - Default
   - TransparentFX

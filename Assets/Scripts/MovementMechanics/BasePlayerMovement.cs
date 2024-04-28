@@ -62,6 +62,7 @@ public class BasePlayerMovement : MonoBehaviour
         // Apply gravity force
         transform.Translate(gravity * Time.deltaTime);
     }
+    
 
     protected void OnCollisionEnter(Collision col)
     {
